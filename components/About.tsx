@@ -16,12 +16,15 @@ export const About: React.FC = () => {
          <div className="relative">
             <div className="absolute inset-0 bg-pulse-200/50 blur-[80px] rounded-full"></div>
             <img 
-              src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?q=80&w=2070&auto=format&fit=crop" 
+              src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?q=60&w=800&auto=format&fit=crop" 
               alt="Team Planning" 
+              width="800"
+              height="600"
+              loading="lazy"
               className="relative z-10 rounded-3xl shadow-2xl border border-white"
             />
             {/* Overlay Card */}
-            <div className="absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl border border-gray-100 shadow-xl hidden md:block">
+            <div className="absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl border border-gray-100 shadow-xl hidden md:block z-20">
                 <div className="text-4xl font-bold text-gray-900 mb-1">PULSE</div>
                 <div className="text-sm text-pulse-600">Engineering & Sustainability</div>
             </div>

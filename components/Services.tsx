@@ -7,42 +7,50 @@ export const Services: React.FC = () => {
     { 
       title: "אישורי קונסטרוקציה", 
       icon: Ruler, 
-      description: "בדיקה ואישור של תוכניות קונסטרוקציה להבטחת יציבות, בטיחות ועמידות המבנה לאורך זמן, תוך עמידה בתקנים המחמירים ביותר." 
+      description: "בדיקה ואישור של תוכניות קונסטרוקציה להבטחת יציבות, בטיחות ועמידות המבנה לאורך זמן.",
+      image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=60&w=600&auto=format&fit=crop"
     },
     { 
       title: "פיקוח וניהול פרויקט", 
       icon: HardHat, 
-      description: "ליווי צמוד באתר הבנייה, פיקוח על איכות הביצוע, ניהול לוחות זמנים ובקרת תקציב קפדנית להבטחת הצלחת הפרויקט." 
+      description: "ליווי צמוד באתר הבנייה, פיקוח על איכות הביצוע, ניהול לוחות זמנים ובקרת תקציב קפדנית.", 
+      image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=60&w=600&auto=format&fit=crop"
     },
     { 
       title: "ייעוץ תרמי ואנרגטי", 
       icon: Thermometer, 
-      description: "אופטימיזציה של מעטפת המבנה וחיסכון באנרגיה באמצעות תכנון פסיבי חכם וניתוח מעמיק של ביצועי המבנה." 
+      description: "אופטימיזציה של מעטפת המבנה וחיסכון באנרגיה באמצעות תכנון פסיבי חכם וניתוח מעמיק.", 
+      image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=60&w=600&auto=format&fit=crop"
     },
     { 
       title: "סימולציות מיקרו-אקלים", 
       icon: Zap, 
-      description: "שימוש במודלים ממוחשבים מתקדמים לניתוח תנאי הסביבה, זרימת אוויר ונוחות תרמית במרחב הציבורי והפרטי." 
+      description: "שימוש במודלים ממוחשבים מתקדמים לניתוח תנאי הסביבה, זרימת אוויר ונוחות תרמית.", 
+      image: "https://images.unsplash.com/photo-1590055531615-f16d36ffe8ec?q=60&w=600&auto=format&fit=crop"
     },
     { 
       title: "ניתוח הצללות ורוח", 
       icon: Wind, 
-      description: "בחינת משטר הרוחות וההצללות לתכנון פתחים יעיל, מניעת מנהרות רוח ויצירת אזורים מוצלים ונעימים לשהייה." 
+      description: "בחינת משטר הרוחות וההצללות לתכנון פתחים יעיל, מניעת מנהרות רוח ויצירת אזורים מוצלים.", 
+      image: "https://images.unsplash.com/photo-1455849318743-b2233052fcff?q=60&w=600&auto=format&fit=crop"
     },
     { 
       title: "בדיקות סנוור", 
       icon: Sun, 
-      description: "זיהוי מוקדם ומניעה של מטרדי סנוור מחזיתות זכוכית למבנים סמוכים ולמשתמשי הדרך, בהתאם לדרישות התכנון." 
+      description: "זיהוי מוקדם ומניעה של מטרדי סנוור מחזיתות זכוכית למבנים סמוכים ולמשתמשי הדרך.", 
+      image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=60&w=600&auto=format&fit=crop"
     },
     { 
       title: "תקינה ישראלית ובינלאומית", 
       icon: FileCheck, 
-      description: "הכנת דוחות והגשות לקבלת תווי תקן לבנייה ירוקה (ת'י 5281, LEED, BREEAM) וליווי תהליך ההסמכה מול הרשויות." 
+      description: "הכנת דוחות והגשות לקבלת תווי תקן לבנייה ירוקה (ת'י 5281, LEED, BREEAM).", 
+      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=60&w=600&auto=format&fit=crop"
     },
     { 
       title: "ייעוץ חומרים והדרכות", 
       icon: BookOpen, 
-      description: "מתן חוות דעת מקצועיות על חומרים ושיטות בנייה חדשניות, וביצוע הרצאות והדרכות לצוותי תכנון וביצוע." 
+      description: "מתן חוות דעת מקצועיות על חומרים ושיטות בנייה חדשניות, והדרכות לצוותים.", 
+      image: "https://images.unsplash.com/photo-1588072432836-e10032774350?q=60&w=600&auto=format&fit=crop"
     },
   ];
 
@@ -72,13 +80,32 @@ export const Services: React.FC = () => {
             {servicesList.map((service, idx) => (
                 <div 
                   key={idx} 
-                  className="group bg-white border border-gray-200 p-8 rounded-3xl hover:border-pulse-500/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col"
+                  className="group relative overflow-hidden rounded-3xl bg-white border border-gray-100 hover:border-pulse-500/50 hover:shadow-xl transition-all duration-500 flex flex-col h-full"
                 >
-                    <div className="w-14 h-14 bg-gray-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-pulse-500 group-hover:text-white transition-all duration-300 text-pulse-600 shadow-sm border border-gray-100">
-                        <service.icon className="w-7 h-7" />
+                    {/* Background Image with Overlay */}
+                    <div className="absolute inset-0 z-0 bg-gray-100">
+                        <img 
+                            src={service.image} 
+                            alt={service.title} 
+                            loading="lazy"
+                            width="600"
+                            height="400"
+                            className="w-full h-full object-cover opacity-25 group-hover:opacity-40 transition-all duration-700 transform group-hover:scale-110"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-white/20"></div>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-pulse-600 transition-colors">{service.title}</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed flex-grow">{service.description}</p>
+
+                    {/* Content */}
+                    <div className="relative z-10 p-8 h-full flex flex-col items-start text-right">
+                        <div className="w-14 h-14 bg-white/80 backdrop-blur rounded-2xl flex items-center justify-center mb-6 group-hover:bg-pulse-500 group-hover:text-white transition-all duration-300 text-pulse-600 shadow-sm border border-gray-100 group-hover:scale-110 group-hover:rotate-3">
+                            <service.icon className="w-7 h-7" />
+                        </div>
+                        <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-pulse-600 transition-colors">{service.title}</h3>
+                        <p className="text-gray-600 text-sm leading-relaxed flex-grow font-medium">{service.description}</p>
+                        
+                        {/* Decorative bottom line */}
+                        <div className="mt-6 w-12 h-1 bg-pulse-100 rounded-full group-hover:w-full group-hover:bg-pulse-500 transition-all duration-500"></div>
+                    </div>
                 </div>
             ))}
         </div>

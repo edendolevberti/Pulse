@@ -22,6 +22,10 @@ export const Header: React.FC = () => {
     { label: 'אודות', href: '#about' },
   ];
 
+  const handleLinkClick = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -29,7 +33,7 @@ export const Header: React.FC = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2 group">
+        <a href="#" className="flex items-center gap-2 group" onClick={handleLinkClick}>
           <div className="relative">
             <div className="absolute inset-0 bg-pulse-500 rounded-full blur-md opacity-20 group-hover:opacity-40 transition-opacity animate-pulse-slow"></div>
             <div className="relative bg-white rounded-full p-2 border border-pulse-500/20 shadow-sm">
@@ -81,7 +85,7 @@ export const Header: React.FC = () => {
                   key={link.label} 
                   href={link.href}
                   className="text-lg font-medium text-gray-700 hover:text-pulse-600"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={handleLinkClick}
                 >
                   {link.label}
                 </a>
@@ -89,11 +93,11 @@ export const Header: React.FC = () => {
               <a 
                 href="#contact"
                 className="text-lg font-medium text-gray-700 hover:text-pulse-600"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={handleLinkClick}
               >
                 צור קשר
               </a>
-              <Button href="#contact" className="w-full justify-center" onClick={() => setIsMobileMenuOpen(false)}>
+              <Button href="#contact" className="w-full justify-center" onClick={handleLinkClick}>
                 קבע פגישה
               </Button>
             </div>

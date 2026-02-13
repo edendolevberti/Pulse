@@ -44,7 +44,7 @@ export const Button: React.FC<ButtonProps> = ({
 
   if (href) {
     return (
-      <a href={href} className={combinedClasses}>
+      <a href={href} className={combinedClasses} {...props as any}>
         {content}
       </a>
     );

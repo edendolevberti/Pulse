@@ -174,15 +174,16 @@ export const Hero: React.FC = () => {
              initial={{ opacity: 0, rotateY: 30, x: 50 }}
              animate={{ opacity: 1, rotateY: 0, x: 0 }}
              transition={{ duration: 1 }}
-             className="absolute top-0 right-4 lg:right-8 w-[75%] lg:w-[65%] h-[80%] lg:h-[85%] rounded-3xl overflow-hidden shadow-2xl border border-white z-10"
+             className="absolute top-0 right-4 lg:right-8 w-[75%] lg:w-[65%] h-[80%] lg:h-[85%] rounded-3xl overflow-hidden shadow-2xl border border-white z-10 bg-gray-200"
            >
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 to-transparent z-10"></div>
               <motion.img 
                 animate={{ scale: [1, 1.1, 1] }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop" 
+                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=70&w=800&auto=format&fit=crop" 
                 alt="Engineering Construction" 
                 className="w-full h-full object-cover"
+                loading="eager"
               />
            </motion.div>
 
@@ -195,9 +196,10 @@ export const Hero: React.FC = () => {
               <motion.img 
                 animate={{ scale: [1.1, 1, 1.1] }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop" 
+                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=70&w=800&auto=format&fit=crop" 
                 alt="Engineers at work" 
                 className="w-full h-full object-cover"
+                loading="eager"
               />
            </motion.div>
 

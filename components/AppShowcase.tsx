@@ -63,8 +63,11 @@ export const AppShowcase: React.FC = () => {
                 >
                   <div className="absolute inset-0 bg-grid-black/[0.05] bg-[length:20px_20px]"></div>
                   <img 
-                    src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2071&auto=format&fit=crop" 
+                    src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=60&w=600&auto=format&fit=crop" 
                     alt="BIM Modeling" 
+                    width="600"
+                    height="400"
+                    loading="lazy"
                     className="rounded-xl w-full h-auto opacity-90"
                   />
                   
