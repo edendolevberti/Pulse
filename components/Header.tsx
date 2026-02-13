@@ -22,25 +22,25 @@ export const Header: React.FC = () => {
     { label: 'אודות', href: '#about' },
   ];
 
-  const handleLinkClick = () => {
+  const handleMobileLinkClick = () => {
     setIsMobileMenuOpen(false);
   };
 
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/80 backdrop-blur-md border-b border-gray-200 py-4 shadow-sm' : 'bg-transparent py-6'
+        (isScrolled || isMobileMenuOpen) ? 'bg-white/95 backdrop-blur-md border-b border-gray-200 py-4 shadow-sm' : 'bg-transparent py-6'
       }`}
     >
-      <div className="container mx-auto px-4 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2 group" onClick={handleLinkClick}>
+      <div className="container mx-auto px-4 flex items-center justify-between relative z-50">
+        <a href="#" className="flex items-center gap-2 group" onClick={() => setIsMobileMenuOpen(false)}>
           <div className="relative">
             <div className="absolute inset-0 bg-pulse-500 rounded-full blur-md opacity-20 group-hover:opacity-40 transition-opacity animate-pulse-slow"></div>
             <div className="relative bg-white rounded-full p-2 border border-pulse-500/20 shadow-sm">
               <Leaf className="w-6 h-6 text-pulse-500 fill-pulse-500" />
             </div>
           </div>
-          <span className={`text-xl md:text-2xl font-bold tracking-tight transition-colors ${isScrolled ? 'text-gray-900' : 'text-gray-900 md:text-gray-900'}`} style={{ fontFamily: 'Inter, sans-serif' }}>
+          <span className={`text-xl md:text-2xl font-bold tracking-tight transition-colors ${(isScrolled || isMobileMenuOpen) ? 'text-gray-900' : 'text-gray-900 md:text-gray-900'}`} style={{ fontFamily: 'Inter, sans-serif' }}>
             PULSE
           </span>
         </a>
@@ -65,8 +65,9 @@ export const Header: React.FC = () => {
         <button 
           className="md:hidden p-2 text-gray-900"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
         >
-          {isMobileMenuOpen ? <X /> : <Menu />}
+          {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
@@ -74,32 +75,37 @@ export const Header: React.FC = () => {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white border-b border-gray-200 overflow-hidden shadow-xl"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.2 }}
+            className="absolute top-full left-0 right-0 bg-white border-b border-gray-200 shadow-xl md:hidden overflow-hidden"
+            style={{ maxHeight: 'calc(100vh - 80px)', overflowY: 'auto' }}
           >
-            <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
+            <div className="container mx-auto px-4 py-8 flex flex-col gap-6 items-center text-center">
               {navLinks.map((link) => (
                 <a 
                   key={link.label} 
                   href={link.href}
-                  className="text-lg font-medium text-gray-700 hover:text-pulse-600"
-                  onClick={handleLinkClick}
+                  className="text-xl font-medium text-gray-800 hover:text-pulse-600 w-full py-2"
+                  onClick={handleMobileLinkClick}
                 >
                   {link.label}
                 </a>
               ))}
+              <hr className="w-16 border-gray-200" />
               <a 
                 href="#contact"
-                className="text-lg font-medium text-gray-700 hover:text-pulse-600"
-                onClick={handleLinkClick}
+                className="text-xl font-medium text-gray-800 hover:text-pulse-600 w-full py-2"
+                onClick={handleMobileLinkClick}
               >
                 צור קשר
               </a>
-              <Button href="#contact" className="w-full justify-center" onClick={handleLinkClick}>
-                קבע פגישה
-              </Button>
+              <div className="w-full pt-2 px-8">
+                <Button href="#contact" className="w-full justify-center" onClick={handleMobileLinkClick}>
+                  קבע פגישה
+                </Button>
+              </div>
             </div>
           </motion.div>
         )}
