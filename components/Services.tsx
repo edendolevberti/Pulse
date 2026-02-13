@@ -8,49 +8,49 @@ export const Services: React.FC = () => {
       title: "אישורי קונסטרוקציה", 
       icon: Ruler, 
       description: "בדיקה ואישור של תוכניות קונסטרוקציה להבטחת יציבות, בטיחות ועמידות המבנה לאורך זמן.",
-      image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=60&w=600&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=60&w=600&auto=format&fit=crop"
     },
     { 
       title: "פיקוח וניהול פרויקט", 
       icon: HardHat, 
       description: "ליווי צמוד באתר הבנייה, פיקוח על איכות הביצוע, ניהול לוחות זמנים ובקרת תקציב קפדנית.", 
-      image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=60&w=600&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=60&w=600&auto=format&fit=crop"
     },
     { 
       title: "ייעוץ תרמי ואנרגטי", 
       icon: Thermometer, 
       description: "אופטימיזציה של מעטפת המבנה וחיסכון באנרגיה באמצעות תכנון פסיבי חכם וניתוח מעמיק.", 
-      image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=60&w=600&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=60&w=600&auto=format&fit=crop"
     },
     { 
       title: "סימולציות מיקרו-אקלים", 
       icon: Zap, 
       description: "שימוש במודלים ממוחשבים מתקדמים לניתוח תנאי הסביבה, זרימת אוויר ונוחות תרמית.", 
-      image: "https://images.unsplash.com/photo-1590055531615-f16d36ffe8ec?q=60&w=600&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1534081333815-ae5019106622?q=60&w=600&auto=format&fit=crop"
     },
     { 
       title: "ניתוח הצללות ורוח", 
       icon: Wind, 
       description: "בחינת משטר הרוחות וההצללות לתכנון פתחים יעיל, מניעת מנהרות רוח ויצירת אזורים מוצלים.", 
-      image: "https://images.unsplash.com/photo-1455849318743-b2233052fcff?q=60&w=600&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=60&w=600&auto=format&fit=crop"
     },
     { 
       title: "בדיקות סנוור", 
       icon: Sun, 
       description: "זיהוי מוקדם ומניעה של מטרדי סנוור מחזיתות זכוכית למבנים סמוכים ולמשתמשי הדרך.", 
-      image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=60&w=600&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=60&w=600&auto=format&fit=crop"
     },
     { 
       title: "תקינה ישראלית ובינלאומית", 
       icon: FileCheck, 
       description: "הכנת דוחות והגשות לקבלת תווי תקן לבנייה ירוקה (ת'י 5281, LEED, BREEAM).", 
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=60&w=600&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=60&w=600&auto=format&fit=crop"
     },
     { 
       title: "ייעוץ חומרים והדרכות", 
       icon: BookOpen, 
       description: "מתן חוות דעת מקצועיות על חומרים ושיטות בנייה חדשניות, והדרכות לצוותים.", 
-      image: "https://images.unsplash.com/photo-1588072432836-e10032774350?q=60&w=600&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=60&w=600&auto=format&fit=crop"
     },
   ];
 
@@ -90,9 +90,9 @@ export const Services: React.FC = () => {
                             loading="lazy"
                             width="600"
                             height="400"
-                            className="w-full h-full object-cover opacity-25 group-hover:opacity-40 transition-all duration-700 transform group-hover:scale-110"
+                            className="w-full h-full object-cover opacity-10 group-hover:opacity-25 transition-all duration-700 transform group-hover:scale-110 grayscale group-hover:grayscale-0"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-white/20"></div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/90 to-white/40"></div>
                     </div>
 
                     {/* Content */}
