@@ -1,5 +1,5 @@
 import React from 'react';
-import { Leaf, Facebook, Twitter, Linkedin } from 'lucide-react';
+import { Facebook, Twitter, Linkedin } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
@@ -8,9 +8,12 @@ export const Footer: React.FC = () => {
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           
           <div className="space-y-4">
-            <a href="#" className="flex items-center gap-2">
-              <Leaf className="w-6 h-6 text-pulse-600 fill-pulse-600" />
-              <span className="text-xl font-bold text-gray-900" style={{ fontFamily: 'Inter, sans-serif' }}>PULSE</span>
+            <a href="#" className="inline-block">
+               <img 
+                  src="https://pulsee.co.il/wp-content/uploads/2025/04/Logo_Colored0.png" 
+                  alt="Pulse Energy" 
+                  className="h-12 w-auto object-contain" 
+               />
             </a>
             <p className="text-gray-600 text-sm leading-relaxed">
               משלבים קיימות, הנדסה וחדשנות ליצירת סביבת חיים טובה יותר.

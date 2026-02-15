@@ -1,11 +1,11 @@
 import React from 'react';
 import { ArrowLeft, ChevronDown, Ruler, Zap, Wind, Sun, Settings, Leaf } from 'lucide-react';
 import { Button } from './ui/Button';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 export const Hero: React.FC = () => {
   // Floating animations for background icons
-  const floatAnimation = {
+  const floatAnimation: Variants = {
     animate: {
       y: [0, -15, 0],
       rotate: [0, 5, -5, 0],
@@ -17,7 +17,7 @@ export const Hero: React.FC = () => {
     }
   };
 
-  const reverseFloatAnimation = {
+  const reverseFloatAnimation: Variants = {
     animate: {
       y: [0, 15, 0],
       rotate: [0, -5, 5, 0],
@@ -31,7 +31,7 @@ export const Hero: React.FC = () => {
   };
 
   // Staggered text entrance animations with blur effect
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -42,7 +42,7 @@ export const Hero: React.FC = () => {
     }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { y: 30, opacity: 0, filter: 'blur(10px)' },
     visible: {
       y: 0,

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Leaf } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from './ui/Button';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -34,15 +34,11 @@ export const Header: React.FC = () => {
     >
       <div className="container mx-auto px-4 flex items-center justify-between relative z-50">
         <a href="#" className="flex items-center gap-2 group" onClick={() => setIsMobileMenuOpen(false)}>
-          <div className="relative">
-            <div className="absolute inset-0 bg-pulse-500 rounded-full blur-md opacity-20 group-hover:opacity-40 transition-opacity animate-pulse-slow"></div>
-            <div className="relative bg-white rounded-full p-2 border border-pulse-500/20 shadow-sm">
-              <Leaf className="w-6 h-6 text-pulse-500 fill-pulse-500" />
-            </div>
-          </div>
-          <span className={`text-xl md:text-2xl font-bold tracking-tight transition-colors ${(isScrolled || isMobileMenuOpen) ? 'text-gray-900' : 'text-gray-900 md:text-gray-900'}`} style={{ fontFamily: 'Inter, sans-serif' }}>
-            PULSE
-          </span>
+           <img 
+              src="https://pulsee.co.il/wp-content/uploads/2025/04/Logo_Colored0.png" 
+              alt="Pulse Energy" 
+              className="h-10 md:h-12 w-auto object-contain" 
+           />
         </a>
 
         {/* Desktop Nav */}
